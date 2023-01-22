@@ -471,11 +471,9 @@ $.extend( $.validator, {
 
 		checkForm: function() {
 			this.prepareForm();
-
 			for ( var i = 0, elements = ( this.currentElements = this.elements() ); elements[ i ]; i++ ) {
 				this.check( elements[ i ] );
 			}
-
 			return this.valid();
 		},
 
@@ -496,14 +494,11 @@ $.extend( $.validator, {
 				// If this element is grouped, then validate all group elements already
 				// containing a value
 				group = this.groups[ checkElement.name ];
-
 				if ( group ) {
 					$.each( this.groups, function( name, testgroup ) {
-
 						if ( testgroup === group && name !== checkElement.name ) {
 							cleanElement = v.validationTargetFor( v.clean( v.findByName( name ) ) );
 							if ( cleanElement && cleanElement.name in v.invalid ) {
-
 								v.currentElements.push( cleanElement );
 								result = v.check( cleanElement ) && result;
 							}
