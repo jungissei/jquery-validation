@@ -1,6 +1,8 @@
 /dist/*
 !/dist/additional-methods.js
 !/dist/jquery.validate.js
+!/dist/localization/
+/dist/localization/*
 !/dist/localization/messages_ja.js
 
 node_modules
